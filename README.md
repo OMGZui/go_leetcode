@@ -1,2 +1,3 @@
 # go_leetcode
-leetcode
+
+go 语言描述
