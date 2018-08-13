@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-// https://leetcode-cn.com/problems/roman-to-integer/description/
 func romanToInt(s string) int {
 	res := 0
 	m := map[byte]int{

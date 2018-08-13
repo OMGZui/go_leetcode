@@ -38,7 +38,7 @@ func removeDuplicatesP(nums []int) (int, []int, []int) {
 func main() {
 	nums := []int{0,0,1,1,1,2,2,3,3,4}
 	fmt.Println(removeDuplicates(nums))
-	
+
 	numsP := []int{0,0,1,1,1,2,2,3,3,4}
 	n, num, _num := removeDuplicatesP(numsP)
 	fmt.Println(n, num, _num)

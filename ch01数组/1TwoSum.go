@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-// https://leetcode-cn.com/problems/two-sum/description/
+
 // 双重循环
 func twoSum(nums []int, target int) []int {
 	arr := make([]int, 2)

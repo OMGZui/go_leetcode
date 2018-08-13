@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-// https://leetcode-cn.com/problems/reverse-integer/description/
 func reverse(x int) int {
 	rev := 0
 	for x != 0 {
