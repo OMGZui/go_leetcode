@@ -27,8 +27,8 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 }
 
 func main() {
-	p := Ints2TreeNode([]int{1, 2, 3, 4, 5})
-	q := Ints2TreeNode([]int{1, 2, 3, 4, 50})
+	p := Ints2TreeNode([]int{1, 2, 3, 4, 5, 6})
+	q := Ints2TreeNode([]int{1, 2, 3, 4, 5, 6})
 	fmt.Println(isSameTree(p, q))
 	fmt.Println(Tree2PreOrder(p))
 	fmt.Println(Tree2InOrder(p))
@@ -52,6 +52,7 @@ func Ints2TreeNode(ints []int) *TreeNode {
 	i := 1
 	for i < n {
 		node := queue[0]
+		// 每次都从新的根结点开始
 		queue = queue[1:]
 
 		if i < n {
