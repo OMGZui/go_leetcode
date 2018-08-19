@@ -6,12 +6,12 @@
  */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"leetcode.tool"
+)
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+type ListNode = leetcode_tool.ListNode
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	// 有一条链为nil，直接返回另一条链
@@ -64,46 +64,16 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 
 func main() {
 
-	l1 := createList([]int{1, 2, 4})
-	l2 := createList([]int{1, 3, 4})
+	l1 := leetcode_tool.CreateList([]int{1, 2, 4})
+	l2 := leetcode_tool.CreateList([]int{1, 3, 4})
 
 	fmt.Println(l1)
-	fmt.Println(showList(l1))
+	fmt.Println(leetcode_tool.ShowList(l1))
 
 	fmt.Println(l2)
-	fmt.Println(showList(l2))
+	fmt.Println(leetcode_tool.ShowList(l2))
 
 	res := mergeTwoLists(l1, l2)
 	fmt.Println(res)
-	fmt.Println(showList(res))
-}
-
-func createList(nums []int) *ListNode {
-	if len(nums) == 0 {
-		return nil
-	}
-
-	res := &ListNode{
-		Val: nums[0],
-	}
-	temp := res
-	for i := 1; i < len(nums); i++ {
-		temp.Next = &ListNode{
-			Val: nums[i],
-		}
-		temp = temp.Next
-	}
-
-	return res
-}
-
-func showList(head *ListNode) []int {
-	var res []int
-
-	for head != nil {
-		res = append(res, head.Val)
-		head = head.Next
-	}
-
-	return res
+	fmt.Println(leetcode_tool.ShowList(res))
 }

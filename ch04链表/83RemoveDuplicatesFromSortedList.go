@@ -6,12 +6,12 @@
  */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"leetcode.tool"
+)
 
-type ListNode2 struct {
-	Val  int
-	Next *ListNode2
-}
+type ListNode2 = leetcode_tool.ListNode
 
 func deleteDuplicates(head *ListNode2) *ListNode2 {
 	if head == nil {
@@ -22,7 +22,7 @@ func deleteDuplicates(head *ListNode2) *ListNode2 {
 	for tail.Next != nil {
 		if tail.Val == tail.Next.Val {
 			tail.Next = tail.Next.Next
-		}else {
+		} else {
 			tail = tail.Next
 		}
 	}
@@ -30,42 +30,11 @@ func deleteDuplicates(head *ListNode2) *ListNode2 {
 }
 
 func main() {
-	l := createList2([]int{1, 1, 2, 3, 3})
+	l := leetcode_tool.CreateList([]int{1, 1, 2, 3, 3})
 	fmt.Println(l)
-	fmt.Println(showList2(l))
+	fmt.Println(leetcode_tool.ShowList(l))
 
 	head := deleteDuplicates(l)
 	fmt.Println(head)
-	fmt.Println(showList2(head))
-}
-
-
-func createList2(nums []int) *ListNode2 {
-	if len(nums) == 0 {
-		return nil
-	}
-
-	res := &ListNode2{
-		Val: nums[0],
-	}
-	temp := res
-	for i := 1; i < len(nums); i++ {
-		temp.Next = &ListNode2{
-			Val: nums[i],
-		}
-		temp = temp.Next
-	}
-
-	return res
-}
-
-func showList2(head *ListNode2) []int {
-	var res []int
-
-	for head != nil {
-		res = append(res, head.Val)
-		head = head.Next
-	}
-
-	return res
+	fmt.Println(leetcode_tool.ShowList(head))
 }
