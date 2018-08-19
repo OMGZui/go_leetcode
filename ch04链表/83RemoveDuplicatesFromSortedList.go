@@ -8,7 +8,7 @@ package main
 
 import (
 	"fmt"
-	"leetcode.tool"
+	"../leetcode.tool"
 )
 
 type ListNode2 = leetcode_tool.ListNode

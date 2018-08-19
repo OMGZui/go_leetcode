@@ -8,7 +8,7 @@ package main
 
 import (
 	"fmt"
-	"leetcode.tool"
+	"../leetcode.tool"
 )
 
 type TreeNode = leetcode_tool.TreeNode
