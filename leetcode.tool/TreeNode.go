@@ -99,3 +99,12 @@ func Tree2PostOrder(root *TreeNode) []int {
 
 	return res
 }
+
+func MaxDepth(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+
+	return 1 + Max(MaxDepth(root.Left), MaxDepth(root.Right))
+}
+
