@@ -13,38 +13,39 @@ type TreeNode struct {
 }
 
 // 利用数组生成二叉树
-func Ints2TreeNode(ints []int) *TreeNode {
-	n := len(ints)
+func Ints2TreeNode(num []int) *TreeNode {
+	n := len(num)
 	if n == 0 {
 		return nil
 	}
 
-	root := &TreeNode{
-		Val: ints[0],
-	}
-
-	queue := make([]*TreeNode, 1, n*2)
-	queue[0] = root
+	// 根结点
+	root := &TreeNode{Val: num[0]}
+	// 结点容器
+	tree := make([]*TreeNode, 1, n*2)
+	// 将root存入
+	tree[0] = root
 
 	i := 1
 	for i < n {
-		node := queue[0]
+		// 构造根结点
+		node := tree[0]
 		// 每次都从新的根结点开始
-		queue = queue[1:]
+		tree = tree[1:]
 
+		// 构造左结点
 		if i < n {
-			node.Left = &TreeNode{Val: ints[i]}
-			queue = append(queue, node.Left)
+			node.Left = &TreeNode{Val: num[i]}
+			tree = append(tree, node.Left)
 		}
 		i++
-
+		// 构造右结点
 		if i < n {
-			node.Right = &TreeNode{Val: ints[i]}
-			queue = append(queue, node.Right)
+			node.Right = &TreeNode{Val: num[i]}
+			tree = append(tree, node.Right)
 		}
 		i++
 	}
-
 	return root
 }
 
