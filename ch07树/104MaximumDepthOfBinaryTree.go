@@ -14,14 +14,11 @@ import (
 type TreeNode3 = leetcode_tool.TreeNode
 
 func maxDepth(root *TreeNode3) int {
-	if root == nil {
-		return 0
-	}
-
 	return leetcode_tool.MaxDepth(root)
 }
 
 func main() {
-	q := leetcode_tool.CreateTreeNode([]int{3, 9, 20, 0, 0, 15, 7})
+	var null = 1000
+	q := leetcode_tool.CreateTreeNode([]int{3, 9, 20, null, null, 15, 7})
 	fmt.Println(maxDepth(q))
 }
