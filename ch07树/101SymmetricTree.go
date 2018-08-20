@@ -35,6 +35,6 @@ func recur(left *TreeNode2, right *TreeNode2) bool {
 }
 
 func main() {
-	q := leetcode_tool.Ints2TreeNode([]int{1, 2, 2, 3, 4, 4, 3})
+	q := leetcode_tool.CreateTreeNode([]int{1, 2, 2, 3, 4, 4, 3})
 	fmt.Println(isSymmetric(q))
 }

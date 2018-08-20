@@ -26,8 +26,8 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 }
 
 func main() {
-	p := leetcode_tool.Ints2TreeNode([]int{1, 2, 3, 4, 5, 6})
-	q := leetcode_tool.Ints2TreeNode([]int{1, 2, 3, 4, 5, 6})
+	p := leetcode_tool.CreateTreeNode([]int{1, 2, 3, 4, 5, 6})
+	q := leetcode_tool.CreateTreeNode([]int{1, 2, 3, 4, 5, 6})
 	fmt.Println(isSameTree(p, q))
 	fmt.Println(leetcode_tool.Tree2PreOrder(p))
 	fmt.Println(leetcode_tool.Tree2InOrder(p))

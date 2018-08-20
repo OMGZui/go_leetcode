@@ -18,10 +18,10 @@ func maxDepth(root *TreeNode3) int {
 		return 0
 	}
 
-	return 1 + leetcode_tool.Max(maxDepth(root.Left), maxDepth(root.Right))
+	return leetcode_tool.MaxDepth(root)
 }
 
 func main() {
-	q := leetcode_tool.Ints2TreeNode([]int{3, 9, 20, 0, 0, 15, 7})
+	q := leetcode_tool.CreateTreeNode([]int{3, 9, 20, 0, 0, 15, 7})
 	fmt.Println(maxDepth(q))
 }

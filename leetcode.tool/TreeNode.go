@@ -12,8 +12,11 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 测试数据
+var null = 1000
+
 // 利用数组生成二叉树
-func Ints2TreeNode(num []int) *TreeNode {
+func CreateTreeNode(num []int) *TreeNode {
 	n := len(num)
 	if n == 0 {
 		return nil
@@ -34,13 +37,13 @@ func Ints2TreeNode(num []int) *TreeNode {
 		tree = tree[1:]
 
 		// 构造左结点
-		if i < n {
+		if i < n && num[i] != null {
 			node.Left = &TreeNode{Val: num[i]}
 			tree = append(tree, node.Left)
 		}
 		i++
 		// 构造右结点
-		if i < n {
+		if i < n && num[i] != null {
 			node.Right = &TreeNode{Val: num[i]}
 			tree = append(tree, node.Right)
 		}
@@ -100,6 +103,7 @@ func Tree2PostOrder(root *TreeNode) []int {
 	return res
 }
 
+// 树的最大深度
 func MaxDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
@@ -108,3 +112,16 @@ func MaxDepth(root *TreeNode) int {
 	return 1 + Max(MaxDepth(root.Left), MaxDepth(root.Right))
 }
 
+// 树的最小深度
+func MinDepth(root *TreeNode) int {
+	switch {
+	case root == nil:
+		return 0
+	case root.Left == nil:
+		return 1 + MinDepth(root.Right)
+	case root.Right == nil:
+		return 1 + MinDepth(root.Left)
+	default:
+		return 1 + Min(MinDepth(root.Left), MinDepth(root.Right))
+	}
+}
