@@ -4,7 +4,7 @@
  * Date: 2018/8/13
  * Time: 10:30
  */
-package main
+package 简单
 
 import (
 	"fmt"

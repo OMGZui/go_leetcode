@@ -4,11 +4,11 @@
  * Date: 2018/8/16
  * Time: 10:56
  */
-package main
+package 简单
 
 import (
 	"fmt"
-	"../leetcode.tool"
+	"../../leetcode.tool"
 )
 
 type ListNode2 = leetcode_tool.ListNode

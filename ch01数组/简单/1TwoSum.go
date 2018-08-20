@@ -1,4 +1,4 @@
-package main
+package 简单
 
 import "fmt"
 

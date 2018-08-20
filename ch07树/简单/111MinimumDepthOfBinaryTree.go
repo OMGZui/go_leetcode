@@ -4,10 +4,10 @@
  * Date: 2018/8/20
  * Time: 14:37
  */
-package main
+package 简单
 
 import (
-	"../leetcode.tool"
+	"../../leetcode.tool"
 	"fmt"
 )
 
