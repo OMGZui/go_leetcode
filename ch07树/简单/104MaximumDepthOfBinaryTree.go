@@ -4,7 +4,7 @@
  * Date: 2018/8/19
  * Time: 16:25
  */
-package 简单
+package main
 
 import (
 	"../../leetcode.tool"
