@@ -16,14 +16,12 @@ func CreateList(nums []int) *ListNode {
 		return nil
 	}
 
-	res := &ListNode{
-		Val: nums[0],
-	}
+	res := &ListNode{Val: nums[0], Next: nil}
 	temp := res
 	for i := 1; i < len(nums); i++ {
-		temp.Next = &ListNode{
-			Val: nums[i],
-		}
+		//temp.Next = new(ListNode)
+		//temp.Next.Val = nums[i]
+		temp.Next = &ListNode{Val: nums[i]}
 		temp = temp.Next
 	}
 
