@@ -1,4 +1,4 @@
-###防止老年痴呆，go语言描述LeetCode
+### 防止老年痴呆，go语言描述LeetCode
 ```
 .
 ├── LICENSE
