@@ -28,7 +28,7 @@ func sortedArrayToBST(nums []int) *TreeNode4 {
 }
 
 func main() {
-	q := []int{0, 0, 3, 7, 9, 15, 20}
+	q := []int{-10, -3, 0, 5, 9}
 	sortTree := sortedArrayToBST(q)
 	fmt.Println(sortTree)
 	fmt.Println(leetcode_tool.Tree2PreOrder(sortTree))
