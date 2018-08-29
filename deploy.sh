@@ -1,12 +1,17 @@
 #!/bin/zsh
 
-echo "输入你改动的内容："
+echo -n "输入你改动的内容："
 read msg
+
 echo "格式化已有目录\n"
 tree -N -o tree.txt
+echo '###防止老年痴呆，go语言描述LeetCode' > README.md
+echo '```' >> README.md
+cat tree.txt >> README.md
+echo '```' >> README.md
+
 echo "---开始构建---\n"
 git add .
 git commit -m "$msg"
 git push origin master
-echo "\n"
-echo "---构建完成---"
+echo "\n---构建完成---"
