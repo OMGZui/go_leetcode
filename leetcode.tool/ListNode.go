@@ -11,23 +11,25 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 创建链表并返回头指针
 func CreateList(nums []int) *ListNode {
 	if len(nums) == 0 {
 		return nil
 	}
 
-	res := &ListNode{Val: nums[0], Next: nil}
-	temp := res
+	head := &ListNode{Val: nums[0], Next: nil}
+	temp := head
 	for i := 1; i < len(nums); i++ {
 		//temp.Next = new(ListNode)
 		//temp.Next.Val = nums[i]
-		temp.Next = &ListNode{Val: nums[i]}
+		temp.Next = &ListNode{Val: nums[i], Next: nil}
 		temp = temp.Next
 	}
 
-	return res
+	return head
 }
 
+// 遍历链表
 func ShowList(head *ListNode) []int {
 	var res []int
 
