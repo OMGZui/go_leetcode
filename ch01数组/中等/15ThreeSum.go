@@ -7,8 +7,8 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 func threeSum(nums []int) [][]int {

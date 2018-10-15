@@ -7,8 +7,8 @@
 package main
 
 import (
-	"sort"
 	"fmt"
+	"sort"
 )
 
 func fourSum(nums []int, target int) [][]int {
