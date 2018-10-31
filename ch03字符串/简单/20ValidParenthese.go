@@ -7,8 +7,8 @@
 package main
 
 import (
-	"fmt"
 	"container/list"
+	"fmt"
 )
 
 var matching = map[rune]rune{

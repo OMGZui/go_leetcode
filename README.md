@@ -69,8 +69,7 @@
 │   ├── quick.go
 │   └── select.go
 ├── ch100举一反三
-│   ├── Gold.go
-│   └── bubble.go
+│   └── Gold.go
 ├── deploy.sh
 ├── leetcode.tool
 │   ├── Helper.go
@@ -78,5 +77,5 @@
 │   └── TreeNode.go
 └── tree.txt
 
-23 directories, 53 files
+23 directories, 52 files
 ```
