@@ -7,8 +7,8 @@
 │   │   ├── 18FourSum.go
 │   │   └── 78Subsets.go
 │   └── 简单
+│       ├── 1-两数之和.go
 │       ├── 136SingleNumber.go
-│       ├── 1TwoSum.go
 │       ├── 26RemoveDuplicatesFromSortedArray.go
 │       ├── 27RemoveElement.go
 │       ├── 35SearchInsertPosition.go
