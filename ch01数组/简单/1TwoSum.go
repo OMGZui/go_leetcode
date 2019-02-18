@@ -19,18 +19,14 @@ func twoSum(nums []int, target int) []int {
 // 利用Map 备忘录，将没用的存起来，遇到之后直接取出
 func twoSumMap(nums []int, target int) []int {
 	m := make(map[int]int)
-	rs := make([]int, 2)
 	for k, v := range nums {
 		w := target - v
 		if j, ok := m[w]; ok {
-			rs[0] = j
-			rs[1] = k
-			return rs
-		} else {
-			m[v] = k
+			return []int{j, k}
 		}
+		m[v] = k
 	}
-	return rs
+	return nil
 }
 
 func main() {
